@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const Create = ({ setUsers }) => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [lastName, setLastName] = useState("");
-  const navigate = useNavigate();
 
   const handleSubmit = () => {
     setUsers((prev) => [...prev, { name, lastName, age }]);
 
-    navigate("/users");
+    setName("");
+    setLastName("");
+    setAge("");
   };
   return (
     <>
